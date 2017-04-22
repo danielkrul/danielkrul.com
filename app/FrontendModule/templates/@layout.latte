@@ -1,0 +1,64 @@
+{**
+ * @param string   $basePath web base path
+ *}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>{ifset #title}{include title|striptags} | {/ifset}Daniel Krůl - Osobní portfolio</title>
+
+	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/main.css">
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+	{block head}{/block}
+</head>
+
+<body>
+	<script> document.documentElement.className+=' js' </script>
+
+	<header id="head">
+		<div class="left">
+			<a href="{$basePath}">
+				<img src="{$basePath}/design/images/logo_danielkrul.png" alt="Logo">
+			</a>
+		</div>
+
+		<div class="right">
+			<div class="menu">
+				<a href="{$basePath}" {ifCurrent Home:default} class="active" {/ifCurrent}>Domů</a>
+				<a n:href="Home:oMne" {ifCurrent Home:oMne} class="active" {/ifCurrent}>O mne</a>
+				<a n:href="Home:sluzby" {ifCurrent Home:sluzby} class="active" {/ifCurrent}>Služby</a>
+				<a n:href="Home:portfolio" {ifCurrent Home:portfolio} class="active" {/ifCurrent}>Portfolio</a>
+				<a n:href="Home:kontakt" {ifCurrent Home:kontakt} class="active last" {/ifCurrent} class="last">Kontakt</a>
+			</div>
+		</div>
+	</header>
+
+	<div id="content">
+		<div class="left">
+			{include content}
+		</div>
+
+		<div class="right">
+			<div class="box">
+				<div class="title">
+					<h2>Autor</h2>
+				</div>
+
+				<div class="face">
+				</div>
+
+				<div class="desc">
+					<p>Jmenuji se (jak jste jistě uhádli) Daniel Krůl. Jsem programátor, webdesignér a příležitostný pisálek. Zde naleznete všechny mé dosavadní práce a názory.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{block scripts}
+	<script src="{$basePath}/js/jquery.js"></script>
+	<script src="{$basePath}/js/main.js"></script>
+	{/block}
+</body>
+</html>
