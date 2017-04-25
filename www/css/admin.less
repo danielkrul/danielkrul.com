@@ -1,0 +1,74 @@
+@import 'init';
+@import 'functions';
+
+@blueColor: #4183D7;
+@redColor: #CF000F;
+
+.flash{
+	padding: 5px;
+	margin-top: .5em;
+	margin-bottom: .5em;
+
+	&.info{
+		background: @blueColor;
+		color: white;
+		border: 1px solid blue;
+	}
+
+	&.error{
+		background: @redColor;
+		color: white;
+		border: 1px solid red;
+	}
+}
+
+#centerWrapper{
+	.display-flex();
+	.flex-center();
+	height: 100%;
+
+	.center{
+		margin: 0 auto;
+
+		.logo{
+			text-align: center;
+			margin-bottom: 1em;
+
+			img{
+				width: 70%;
+			}
+		}
+
+		form{
+			margin-bottom: 1em;
+		}
+	}
+}
+
+#mainContainer{
+	height: 100%;
+	min-height: 100%;
+
+	.row {
+		height: 100%;
+	}
+
+	.adminPanel{
+		background: black;
+		height: 100%;
+
+		.logo{
+			margin-top: .5em;
+			margin-bottom: 1em;
+			img {
+				width: 85%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.contentPanel{
+
+	}
+}

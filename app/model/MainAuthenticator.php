@@ -7,22 +7,18 @@ class MainAuthenticator extends Repository implements NS\IAuthenticator
 
     function authenticate(array $credentials)
     {
-        list($username, $password) = $credentials;
-        $row = $this->database->table('users')
-            ->where('username', $username)->fetch();
+        list($email, $password) = $credentials;
+        $row = $this->connection->table('users')
+            ->where('email', $email)->fetch();
 
         if (!$row) {
-            throw new NS\AuthenticationException('User not found.');
+            throw new NS\AuthenticationException('Uživatel nenalezen!');
         }
 
         if ($row->password !== hash('sha256', $password)) {
-            throw new NS\AuthenticationException("Invalid password.", self::INVALID_CREDENTIAL);
+            throw new NS\AuthenticationException("Nesprávné heslo!");
         }
 
-        if (!NS\Passwords::verify($password, $row->password)) {
-            throw new NS\AuthenticationException('Invalid password.');
-        }
-
-        return new NS\Identity($row->id, $row->role, ['username' => $row->username]);
+        return new NS\Identity($row->id, $row->sec_level, ['email' => $row->email]);
     }
 }

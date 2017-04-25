@@ -9,7 +9,8 @@
 
 	<title>{ifset #title}{include title|striptags} | {/ifset}Daniel Krůl - Osobní portfolio</title>
 
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/main.css">
+	<link rel="stylesheet" href="{$basePath}/design/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{$basePath}/css/main.css">
 	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
 	{block head}{/block}
 </head>
@@ -26,11 +27,9 @@
 
 		<div class="right">
 			<div class="menu">
-				<a href="{$basePath}" {ifCurrent Home:default} class="active" {/ifCurrent}>Domů</a>
-				<a n:href="Home:oMne" {ifCurrent Home:oMne} class="active" {/ifCurrent}>O mne</a>
-				<a n:href="Home:sluzby" {ifCurrent Home:sluzby} class="active" {/ifCurrent}>Služby</a>
-				<a n:href="Home:portfolio" {ifCurrent Home:portfolio} class="active" {/ifCurrent}>Portfolio</a>
-				<a n:href="Home:kontakt" {ifCurrent Home:kontakt} class="active last" {/ifCurrent} class="last">Kontakt</a>
+				{foreach Array("Úvod"=>"default", "O mně"=>"oMne", "Služby"=>"sluzby", "Portfolio"=>"portfolio", "Kontakt"=>"kontakt") as $name=>$href}
+  					<a n:class="$presenter->isLinkCurrent($href) ? active" n:href="{$href}">{$name}</a>
+				{/foreach}
 			</div>
 		</div>
 	</header>
@@ -53,6 +52,32 @@
 					<p>Jmenuji se (jak jste jistě uhádli) Daniel Krůl. Jsem programátor, webdesignér a příležitostný pisálek. Zde naleznete všechny mé dosavadní práce a názory.</p>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="row">
+			<div class="left">
+				<table cellspacing="15">
+					<tr>
+						<td><i class="fa fa-phone" aria-hidden="true"></i></td>
+						<td class="info">+420 734 132 585</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+						<td class="info">info@danielkrul.com</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="right">
+				<a href="#" title="Facebok"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="#" title="GitHub danielkrul"><i class="fa fa-github" aria-hidden="true"></i></a>
+			</div>
+		</div>
+
+		<div class="bottom">
+			&copy; 2017 Daniel Krůl - <a target="_blank" n:href=":Admin:Admin:">Administrace</a>
 		</div>
 	</div>
 

@@ -11,6 +11,30 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'e7a6fd2e7a869bb207158e9416bdd9b0' => __DIR__ . '/..' . '/nette/application/src/compatibility.php',
     );
 
+    public static $prefixLengthsPsr4 = array (
+        'I' => 
+        array (
+            'Instante\\ExtendedFormMacros\\' => 28,
+            'Instante\\Bootstrap3Renderer\\' => 28,
+            'Instante\\' => 9,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Instante\\ExtendedFormMacros\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/instante/extended-form-macros/src',
+        ),
+        'Instante\\Bootstrap3Renderer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/instante/bootstrap-3-renderer/src',
+        ),
+        'Instante\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/instante/utils/src',
+        ),
+    );
+
     public static $classMap = array (
         'AdminerDatabaseHide' => __DIR__ . '/..' . '/vrana/adminer/plugins/database-hide.php',
         'AdminerDumpAlter' => __DIR__ . '/..' . '/vrana/adminer/plugins/dump-alter.php',
@@ -413,6 +437,8 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit091ed5d24b4127ffc48411e34be2086f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit091ed5d24b4127ffc48411e34be2086f::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit091ed5d24b4127ffc48411e34be2086f::$classMap;
 
         }, null, ClassLoader::class);

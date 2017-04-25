@@ -1,2 +1,16 @@
 {block content}
+	<div id="centerWrapper">
+		<div class="center">
+			<div class="logo">
+				<img src="{$basePath}/design/images/logo_danielkrul.png" alt="Logo">
+			</div>
+
+			<div n:foreach="$flashes as $flash" class="alert alert-dismissable fade in {$flash->type}">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				{$flash->message}
+			</div>
+			{control signInForm}
+			<a n:href=":Frontend:Home:">&#8617; Zpět na web</a>
+		</div>
+	</div>
 {/block}

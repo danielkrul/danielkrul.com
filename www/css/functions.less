@@ -49,3 +49,10 @@
 	-webkit-transform: translateY(-50%) translateX(-50%);
 	transform: translateY(-50%) translateX(-50%);
 }
+
+.flex-direction(@direction){
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: @direction;
+	flex-direction: @direction;
+}

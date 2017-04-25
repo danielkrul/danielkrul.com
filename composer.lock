@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a383d7ffec29ae94a1439299be3250a5",
+    "content-hash": "5d806da8c09bd9e1cbfb931343fb4b8f",
     "packages": [
         {
             "name": "dg/composer-cleaner",
@@ -51,6 +51,149 @@
                 "composer"
             ],
             "time": "2017-03-21T02:22:09+00:00"
+        },
+        {
+            "name": "instante/bootstrap-3-renderer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/instante/bootstrap3renderer.git",
+                "reference": "9451cd1bb30ec68ce415657ddae29fd78a600a94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/instante/bootstrap3renderer/zipball/9451cd1bb30ec68ce415657ddae29fd78a600a94",
+                "reference": "9451cd1bb30ec68ce415657ddae29fd78a600a94",
+                "shasum": ""
+            },
+            "require": {
+                "instante/extended-form-macros": "@dev",
+                "instante/utils": "~1.3",
+                "nette/forms": "~2.4",
+                "nette/utils": "~2.4"
+            },
+            "require-dev": {
+                "instante/php-test-suite": "@dev",
+                "jakub-onderka/php-parallel-lint": "~0.6",
+                "mockery/mockery": "@dev",
+                "nette/tester": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Instante\\Bootstrap3Renderer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "description": "Nette forms renderer with bootstrap 3",
+            "keywords": [
+                "Forms",
+                "bootstrap",
+                "bootstrap3",
+                "nette"
+            ],
+            "time": "2017-04-21 19:53:27"
+        },
+        {
+            "name": "instante/extended-form-macros",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/instante/extended-form-macros.git",
+                "reference": "bb19ce6ef01c7b552b7d5edc580ecc8315429c9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/instante/extended-form-macros/zipball/bb19ce6ef01c7b552b7d5edc580ecc8315429c9b",
+                "reference": "bb19ce6ef01c7b552b7d5edc580ecc8315429c9b",
+                "shasum": ""
+            },
+            "require": {
+                "instante/utils": "~1.2",
+                "latte/latte": "~2.4",
+                "nette/bootstrap": "~2.4",
+                "nette/di": "~2.4",
+                "nette/forms": "~2.4"
+            },
+            "require-dev": {
+                "instante/php-test-suite": "@dev",
+                "jakub-onderka/php-parallel-lint": "~0.6",
+                "mockery/mockery": "@dev",
+                "nette/application": "~2.4",
+                "nette/tester": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Instante\\ExtendedFormMacros\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "description": "Extended form rendering macros for Nette framework",
+            "keywords": [
+                "Forms",
+                "latte",
+                "macros",
+                "nette"
+            ],
+            "time": "2016-09-06T13:35:01+00:00"
+        },
+        {
+            "name": "instante/utils",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/instante/utils.git",
+                "reference": "72996a023accc519de087441c944a78829b16857"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/instante/utils/zipball/72996a023accc519de087441c944a78829b16857",
+                "reference": "72996a023accc519de087441c944a78829b16857",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "~2.2",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "~0.6",
+                "nette/mail": "~2.2",
+                "nette/reflection": "~2.2",
+                "nette/tester": "@dev"
+            },
+            "suggest": {
+                "nette/mail": "~2.2",
+                "nette/reflection": "~2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Instante\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "description": "Simple utils for Instante project",
+            "keywords": [
+                "instante",
+                "nette"
+            ],
+            "time": "2016-08-11T13:41:53+00:00"
         },
         {
             "name": "latte/latte",
@@ -1252,7 +1395,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "instante/bootstrap-3-renderer": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
