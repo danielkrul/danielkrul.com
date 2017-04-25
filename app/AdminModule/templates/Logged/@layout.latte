@@ -24,15 +24,34 @@
 	<script> document.documentElement.className+=' js' </script>
 
 	<div id="mainContainer" class="container-fluid">
-		<div class="row">
-			<div class="col-sm-3 adminPanel">
+		<div class="row topPanelRow verticalAlign">
+			<div class="col-sm-10">
 				<div class="logo">
 					<img src="{$basePath}/design/images/logo_danielkrul_white.png" alt="Logo">
 				</div>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="dropdown pull-right">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{$user->getIdentity()->name}
+						<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                		<span class="caret"></span>
+                	</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Uživatelé <span class="	glyphicon glyphicon-user pull-right" aria-hidden="true"></span></a></li>
+							<li class="divider"></li>
+							<li><a n:href="logout!">Odhlásit <span class="glyphicon glyphicon-log-out pull-right" aria-hidden="true"></span></a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row rowFull">
+			<div class="col-sm-3 adminPanel">
 				<div class="sidebar-nav">
 					<ul class="nav nav-pills nav-stacked">
 						<li n:class="$presenter->isLinkCurrent('Logged:') ? active">
-							<a n:href="Logged:">Home <span class="pull-right  glyphicon glyphicon-home"></span></a>
+							<a n:href="Logged:">Administrace <span class="pull-right  glyphicon glyphicon-home"></span></a>
 						</li>
 						<li n:class="$presenter->isLinkCurrent('Logged:newArticle') ? active, $presenter->isLinkCurrent('Logged:articlesList') ? active, dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Články <span class="pull-right  glyphicon glyphicon glyphicon-book"></span> <span class="caret"></span></a>

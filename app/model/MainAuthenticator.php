@@ -19,6 +19,6 @@ class MainAuthenticator extends Repository implements NS\IAuthenticator
             throw new NS\AuthenticationException("Nesprávné heslo!");
         }
 
-        return new NS\Identity($row->id, $row->sec_level, ['email' => $row->email]);
+        return new NS\Identity($row->id, $row->sec_level, ['email' => $row->email, 'name' => $row->name]);
     }
 }
