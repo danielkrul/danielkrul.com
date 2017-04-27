@@ -10,6 +10,7 @@ session:
 services:
 	posts: PostsRepository
 	comments: CommentsRepository
+	survey: SurveyRepository
 	authenticator: MainAuthenticator
 	router: App\RouterFactory::createRouter
 

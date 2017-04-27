@@ -25,6 +25,14 @@ class RouterFactory
 			'id' => NULL,
 			));
 
+		// SurveyExample
+		$router[] = new Route('survey/<action>/<id>', array(
+			'module' => 'Frontend',
+			'presenter' => 'Survey',
+			'action' => 'default',
+			'id' => NULL,
+			));
+
 		// Frontend
 		$router[] = new Route('<action>/<id>', array(
 			'module' => 'Frontend',

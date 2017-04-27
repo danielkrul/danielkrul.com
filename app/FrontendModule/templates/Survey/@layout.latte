@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>{ifset #title}{include title|striptags} | {/ifset}Administrace</title>
+	<title>{ifset #title}{include title|striptags} | {/ifset}Anketa</title>
 	
 	<link rel="stylesheet" href="{$basePath}/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="{$basePath}/bootstrap/css/bootstrap-theme.css">
@@ -15,7 +15,7 @@
 	<script src="{$basePath}/bootstrap/js/bootstrap.min.js"></script>
 	<script src="{$basePath}/js/admin.js"></script>
 	
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/admin.css">
+	{* <link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/admin.css"> *}
 	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
 	{block head}{/block}
 </head>
@@ -24,9 +24,6 @@
 	<script> document.documentElement.className+=' js' </script>
 
 	{block content}
-	{/block}
-
-	{block scripts}
 	{/block}
 </body>
 </html>

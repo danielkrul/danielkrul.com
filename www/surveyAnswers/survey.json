@@ -1,0 +1,57 @@
+{
+    "survey": {
+        "questions": [
+            {
+                "text": "Máte rádi PHP?",
+                "values": [
+                    {
+                        "text": "Ano",
+                        "times": 2
+                    },
+                    {
+                        "text": "Ne",
+                        "times": 9
+                    },
+                    {
+                        "text": "Nepoužívám ho",
+                        "times": 1
+                    }
+                ]
+            },
+            {
+                "text": "Líbí se Vám tato aplikace?",
+                "values": [
+                    {
+                        "text": "Ano",
+                        "times": 9
+                    },
+                    {
+                        "text": "Jistě",
+                        "times": 7
+                    },
+                    {
+                        "text": "Nesmírně se mi líbí!",
+                        "times": 3
+                    }
+                ]
+            },
+            {
+                "text": "Máte se rádi?",
+                "values": [
+                    {
+                        "text": "Ne",
+                        "times": 3
+                    },
+                    {
+                        "text": "Jistě",
+                        "times": 21
+                    },
+                    {
+                        "text": "Nesmírně se mi líbí!",
+                        "times": 51
+                    }
+                ]
+            }
+        ]
+    }
+}
